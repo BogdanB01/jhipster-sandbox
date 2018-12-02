@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.taip.smart.city"
+    },
+    "jhipsterVersion": "5.6.1",
+    "applicationType": "microservice",
+    "baseName": "weather",
+    "packageName": "com.taip.smart.city",
+    "packageFolder": "com/taip/smart/city",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MDA2MDAwNThiNjJkYzc2NzBhYWQ4MDIzMjBmOGU0ODE2ZDkwNjE4MTM2NTZhZGVkMTFlNDNjN2VmNDY5ODJiNTgwN2Y2NmM0Y2IwMzY4ZDRkOTU3OTgyZTE2NWJjYTViNjEyNGZkMGM1OTJjMWY5NzM4YzAxZjA1NWQ4YjJkNTY=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
