@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.taip.smart.city"
+    },
+    "jhipsterVersion": "5.6.1",
+    "applicationType": "gateway",
+    "baseName": "gateway",
+    "packageName": "com.taip.smart.city",
+    "packageFolder": "com/taip/smart/city",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MjQzNTA1NTQ1NTIyZTc0MjkxODJmMTJmYjM4ZWRkYzE5MDBiYWNjMTEzN2Q2MDY3YjhiYzk4MzY3MDM4NGM0ZDg4NzJiMjY5YTRkMDA0Y2FmZTJkMzRiZTMwZWQ4MjYyNTU2MmUxMDlhYTM1N2E2ZWM3NDQzNGEzNTg0ODk4ZGI=",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
