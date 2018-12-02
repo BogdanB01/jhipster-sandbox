@@ -6,8 +6,6 @@ import { JHipsterRegistrySharedModule } from 'app/shared';
 import {
     adminState,
     LogsComponent,
-    JhiMetricsMonitoringModalComponent,
-    JhiMetricsMonitoringComponent,
     JhiHealthModalComponent,
     JhiHealthCheckComponent,
     JhiConfigurationComponent,
@@ -15,7 +13,6 @@ import {
     JhiConfigurationService,
     JhiLogfileComponent,
     JhiHealthService,
-    JhiMetricsService,
     LogsService,
     JhiLogfileService
 } from './';
@@ -28,12 +25,10 @@ import {
         JhiDocsComponent,
         JhiHealthCheckComponent,
         JhiHealthModalComponent,
-        JhiMetricsMonitoringComponent,
-        JhiMetricsMonitoringModalComponent,
         JhiLogfileComponent
     ],
-    entryComponents: [JhiHealthModalComponent, JhiMetricsMonitoringModalComponent],
-    providers: [JhiConfigurationService, JhiHealthService, JhiMetricsService, LogsService, JhiLogfileService],
+    entryComponents: [JhiHealthModalComponent],
+    providers: [JhiConfigurationService, JhiHealthService, LogsService, JhiLogfileService],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class JHipsterRegistryAdminModule {}

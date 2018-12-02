@@ -7,8 +7,7 @@
         "root": "src/main/webapp/",
         "outDir": "target/www/app",
         "assets": [
-            "content",
-            "favicon.ico"
+            "content"
         ],
         "index": "index.html",
         "main": "app/app.main.ts",

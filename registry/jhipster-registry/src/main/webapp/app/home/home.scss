@@ -1,16 +1,3 @@
-
-/* ==========================================================================
-Main page styles
-========================================================================== */
-
-.hipster {
-    display: inline-block;
-    width: 347px;
-    height: 497px;
-    background: url("../../content/images/hipster.png") no-repeat center top;
-    background-size: contain;
-}
-
 .card {
     margin-top: 2%;
     .card-title {
@@ -20,25 +7,10 @@ Main page styles
         font-size: 17px;
     }
     .card-header {
-        background: #007bff;
+        background: #858A90;
     }
 }
 
 .table, .table tr, .table td, .table th {
     border: none;
-}
-
-
-/* wait autoprefixer update to allow simple generation of high pixel density media query */
-@media
-only screen and (-webkit-min-device-pixel-ratio: 2),
-only screen and (   min--moz-device-pixel-ratio: 2),
-only screen and (     -o-min-device-pixel-ratio: 2/1),
-only screen and (        min-device-pixel-ratio: 2),
-only screen and (                min-resolution: 192dpi),
-only screen and (                min-resolution: 2dppx) {
-    .hipster {
-        background: url("../../content/images/hipster2x.png") no-repeat center top;
-        background-size: contain;
-    }
 }

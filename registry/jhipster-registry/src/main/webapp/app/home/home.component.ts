@@ -8,7 +8,6 @@ import { JhiApplicationsService } from 'app/registry';
 import { JhiRefreshService } from '../shared/refresh/refresh.service';
 import { Subscription } from 'rxjs/Subscription';
 
-import { VERSION } from 'app/app.constants';
 import { EurekaStatusService } from './eureka.status.service';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { LoginOAuth2Service } from 'app/shared/oauth2/login-oauth2.service';
@@ -40,7 +39,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         private profileService: ProfileService,
         private refreshService: JhiRefreshService
     ) {
-        this.version = VERSION ? 'v' + VERSION : '';
         this.appInstances = [];
     }
 

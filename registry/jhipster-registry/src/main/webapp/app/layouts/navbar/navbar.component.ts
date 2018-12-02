@@ -6,8 +6,6 @@ import { JhiEventManager } from 'ng-jhipster';
 import { ProfileService } from 'app/layouts/profiles/profile.service';
 import { Principal, LoginModalService, LoginService } from 'app/shared';
 
-import { VERSION } from 'app/app.constants';
-
 @Component({
     selector: 'jhi-navbar',
     templateUrl: './navbar.component.html',
@@ -28,7 +26,6 @@ export class NavbarComponent implements OnInit {
         private eventManager: JhiEventManager,
         private router: Router
     ) {
-        this.version = VERSION ? 'v' + VERSION : '';
         this.isNavbarCollapsed = true;
     }
 
