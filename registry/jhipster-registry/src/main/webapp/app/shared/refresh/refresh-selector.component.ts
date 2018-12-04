@@ -15,7 +15,7 @@ export class JhiRefreshSelectorComponent implements OnInit, OnDestroy {
     refreshChangedSubscription: Subscription;
 
     constructor(private refreshService: JhiRefreshService) {
-        this.refreshTimes = [0, 5, 10, 30, 60, 300];
+        this.refreshTimes = [5, 10, 30, 60, 300];
         this.activeRefreshTime = this.refreshTimes[0];
     }
 
