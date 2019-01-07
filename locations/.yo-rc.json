@@ -1,0 +1,38 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.taip",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "5.7.0",
+    "applicationType": "microservice",
+    "baseName": "locations",
+    "packageName": "com.taip",
+    "packageFolder": "com/taip",
+    "serverPort": "8082",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MjZhYWM4YTBiMmMzOTU1NTNkMzg4YjZjZmJmMTY3NzhiOGJmNWYxMzgzNGE4NTk4YWQ0OGM2MDY5MzYzNWFiZGQ1NWQ5Nzk3MjNkNzcyOTYzNzVlZDkzODc3MjM5YThhZWM5ZGYwOWI0ZTY0YTdlOTdhYmVjNDlkNTA4NTliYzQ=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "enableTranslation": true,
+    "clientPackageManager": "npm",
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
