@@ -47,7 +47,6 @@ public class LoggingAspect {
         " || within(com.taip.service..*)"+
         " || within(com.taip.web.rest..*)")
     public void applicationPackagePointcut() {
-        // Method is empty as this is just a Pointcut, the implementations are in the advices.
     }
 
     /**
