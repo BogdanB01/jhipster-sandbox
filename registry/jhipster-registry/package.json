@@ -47,7 +47,7 @@
     "del": "2.2.2",
     "event-stream": "3.3.4",
     "exports-loader": "0.7.0",
-    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "file-loader": "1.1.11",
     "fork-ts-checker-webpack-plugin": "0.4.2",
     "generator-jhipster": "4.14.0",

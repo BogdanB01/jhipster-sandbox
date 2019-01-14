@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.catalincostan.attraction"
+    },
+    "jhipsterVersion": "5.7.2",
+    "applicationType": "microservice",
+    "baseName": "attractions",
+    "packageName": "com.catalincostan.attraction",
+    "packageFolder": "com/catalincostan/attraction",
+    "serverPort": "8833",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "ZGJjMjY1M2VmNTcxMTJkZWFkMmZlZmVhYjQ2ZmUzYmY2MjViZGQyN2E2YWRjZDE5NGM3MzYwOTIyNzZmNTIwM2MwZjljOWYyYjdiZDMxNzEwMWVjMjBiNzk5ZGY0MTMyNTY3ZmZjNDAyM2ViYzRmMjkzYjBlMTQ5MDYwOWY2NzU=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
