@@ -1,0 +1,89 @@
+2019-01-15 01:54:07.621  INFO 2776 --- [restartedMain] com.waze.WazeApp                         : The following profiles are active: swagger,dev
+2019-01-15 01:54:09.745 DEBUG 2776 --- [restartedMain] com.waze.config.AsyncConfiguration       : Creating Async Task Executor
+2019-01-15 01:54:10.266 DEBUG 2776 --- [restartedMain] com.waze.config.MetricsConfiguration     : Registering JVM gauges
+2019-01-15 01:54:10.277 DEBUG 2776 --- [restartedMain] com.waze.config.MetricsConfiguration     : Initializing Metrics JMX reporting
+2019-01-15 01:54:11.464  WARN 2776 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-15 01:54:12.753  INFO 2776 --- [restartedMain] com.waze.config.WebConfigurer            : Web application configuration, using profiles: swagger
+2019-01-15 01:54:12.756 DEBUG 2776 --- [restartedMain] com.waze.config.WebConfigurer            : Initializing Metrics registries
+2019-01-15 01:54:12.758 DEBUG 2776 --- [restartedMain] com.waze.config.WebConfigurer            : Registering Metrics Filter
+2019-01-15 01:54:12.760 DEBUG 2776 --- [restartedMain] com.waze.config.WebConfigurer            : Registering Metrics Servlet
+2019-01-15 01:54:12.765  INFO 2776 --- [restartedMain] com.waze.config.WebConfigurer            : Web application fully configured
+2019-01-15 01:54:13.025  WARN 2776 --- [restartedMain] com.waze.security.jwt.TokenProvider      : Warning: the JWT key used is not Base64-encoded. We recommend using the `jhipster.security.authentication.jwt.base64-secret` key for optimum security.
+2019-01-15 01:54:15.761 DEBUG 2776 --- [restartedMain] com.waze.config.CacheConfiguration       : Configuring Hazelcast
+2019-01-15 01:54:15.826 DEBUG 2776 --- [restartedMain] com.waze.config.CacheConfiguration       : Configuring Hazelcast clustering for instanceId: waze
+2019-01-15 01:54:15.826 DEBUG 2776 --- [restartedMain] com.waze.config.CacheConfiguration       : Application is running with the "dev" profile, Hazelcast cluster will only work with localhost instances
+2019-01-15 01:54:15.869  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-01-15 01:54:16.060  INFO 2776 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-01-15 01:54:16.060  INFO 2776 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-01-15 01:54:16.208  INFO 2776 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-01-15 01:54:16.208  INFO 2776 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-01-15 01:54:16.529  INFO 2776 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-15 01:54:16.552  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-15 01:54:16.552  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-15 01:54:16.552  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-15 01:54:16.552  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-15 01:54:16.552  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-15 01:54:16.552  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-01-15 01:54:16.553  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-15 01:54:16.868  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-15 01:54:16.871  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 5
+2019-01-15 01:54:16.874  INFO 2776 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 12
+2019-01-15 01:54:16.881  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1547510056878 with initial instances count: 0
+2019-01-15 01:54:16.994  INFO 2776 --- [restartedMain] com.hazelcast.instance.AddressPicker     : [LOCAL] [dev] [3.9.4] Picked [127.0.0.1]:15700, using socket ServerSocket[addr=/0:0:0:0:0:0:0:0,localport=15700], bind any local is true
+2019-01-15 01:54:17.005  INFO 2776 --- [restartedMain] com.hazelcast.system                     : [127.0.0.1]:15700 [dev] [3.9.4] Hazelcast 3.9.4 (20180420 - b8001d5) starting at [127.0.0.1]:15700
+2019-01-15 01:54:17.005  INFO 2776 --- [restartedMain] com.hazelcast.system                     : [127.0.0.1]:15700 [dev] [3.9.4] Copyright (c) 2008-2018, Hazelcast, Inc. All Rights Reserved.
+2019-01-15 01:54:17.006  INFO 2776 --- [restartedMain] com.hazelcast.system                     : [127.0.0.1]:15700 [dev] [3.9.4] Configured Hazelcast Serialization version: 1
+2019-01-15 01:54:17.612  INFO 2776 --- [restartedMain] c.h.s.i.o.impl.BackpressureRegulator     : [127.0.0.1]:15700 [dev] [3.9.4] Backpressure is disabled
+2019-01-15 01:54:18.328  INFO 2776 --- [restartedMain] com.hazelcast.instance.Node              : [127.0.0.1]:15700 [dev] [3.9.4] Creating TcpIpJoiner
+2019-01-15 01:54:18.458  INFO 2776 --- [restartedMain] c.h.s.i.o.impl.OperationExecutorImpl     : [127.0.0.1]:15700 [dev] [3.9.4] Starting 4 partition threads and 3 generic threads (1 dedicated for priority tasks)
+2019-01-15 01:54:18.463  INFO 2776 --- [restartedMain] c.h.internal.diagnostics.Diagnostics     : [127.0.0.1]:15700 [dev] [3.9.4] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
+2019-01-15 01:54:18.479  INFO 2776 --- [restartedMain] com.hazelcast.core.LifecycleService      : [127.0.0.1]:15700 [dev] [3.9.4] [127.0.0.1]:15700 is STARTING
+2019-01-15 01:54:18.500  INFO 2776 --- [restartedMain] com.hazelcast.system                     : [127.0.0.1]:15700 [dev] [3.9.4] Cluster version set to 3.9
+2019-01-15 01:54:18.501  INFO 2776 --- [restartedMain] c.h.internal.cluster.ClusterService      : [127.0.0.1]:15700 [dev] [3.9.4] 
+
+Members {size:1, ver:1} [
+	Member [127.0.0.1]:15700 - 0ac3629c-e3f5-431b-972b-187ddc9852bc this
+]
+
+2019-01-15 01:54:18.652  INFO 2776 --- [restartedMain] com.hazelcast.core.LifecycleService      : [127.0.0.1]:15700 [dev] [3.9.4] [127.0.0.1]:15700 is STARTED
+2019-01-15 01:54:18.686 DEBUG 2776 --- [restartedMain] com.waze.config.CacheConfiguration       : Starting HazelcastCacheManager
+2019-01-15 01:54:19.015  WARN 2776 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-01-15 01:54:19.636 DEBUG 2776 --- [restartedMain] i.g.j.c.apidoc.SwaggerAutoConfiguration  : Starting Swagger
+2019-01-15 01:54:19.647 DEBUG 2776 --- [restartedMain] i.g.j.c.apidoc.SwaggerAutoConfiguration  : Started Swagger in 11 ms
+2019-01-15 01:54:20.565  INFO 2776 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1547510060565, current=UP, previous=STARTING]
+2019-01-15 01:54:20.566  INFO 2776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WAZE/waze:d1919774683ee8aff53b03ba1e0094f5: registering service...
+2019-01-15 01:54:20.683  INFO 2776 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_WAZE/waze:d1919774683ee8aff53b03ba1e0094f5 - registration status: 204
+2019-01-15 01:54:20.922  INFO 2776 --- [restartedMain] com.waze.WazeApp                         : Started WazeApp in 16.945 seconds (JVM running for 20.368)
+2019-01-15 01:54:20.936  INFO 2776 --- [restartedMain] com.waze.WazeApp                         : 
+----------------------------------------------------------
+	Application 'waze' is running! Access URLs:
+	Local: 		http://localhost:9999/
+	External: 	http://192.168.100.8:9999/
+	Profile(s): 	[swagger, dev]
+----------------------------------------------------------
+2019-01-15 01:54:20.936  INFO 2776 --- [restartedMain] com.waze.WazeApp                         : 
+----------------------------------------------------------
+	Config Server: 	Connected to the JHipster Registry config server!
+----------------------------------------------------------
+2019-01-15 01:54:26.875  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-15 01:54:26.906  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-15 01:54:26.906  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-15 01:54:26.907  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-15 01:54:26.907  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-15 01:54:26.907  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-01-15 01:54:26.907  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-15 01:54:26.988  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-15 01:54:36.992  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-01-15 01:54:36.992  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-01-15 01:54:36.992  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-01-15 01:54:36.993  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-01-15 01:54:36.993  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-01-15 01:54:36.994  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-01-15 01:54:36.994  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-01-15 01:54:37.178  INFO 2776 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-01-15 01:56:18.617  INFO 2776 --- [hz.waze.HealthMonitor] c.h.internal.diagnostics.HealthMonitor   : [127.0.0.1]:15700 [dev] [3.9.4] processors=4, physical.memory.total=8.0G, physical.memory.free=200.5M, swap.space.total=2.0G, swap.space.free=884.5M, heap.memory.used=157.5M, heap.memory.free=609.5M, heap.memory.total=767.0M, heap.memory.max=1.8G, heap.memory.used/total=20.53%, heap.memory.used/max=8.65%, minor.gc.count=15, minor.gc.time=255ms, major.gc.count=3, major.gc.time=329ms, load.process=24.88%, load.system=100.00%, load.systemAverage=5.04, thread.count=61, thread.peakCount=68, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=1, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+2019-01-15 01:56:38.623  INFO 2776 --- [hz.waze.HealthMonitor] c.h.internal.diagnostics.HealthMonitor   : [127.0.0.1]:15700 [dev] [3.9.4] processors=4, physical.memory.total=8.0G, physical.memory.free=158.8M, swap.space.total=2.0G, swap.space.free=916.5M, heap.memory.used=163.7M, heap.memory.free=603.3M, heap.memory.total=767.0M, heap.memory.max=1.8G, heap.memory.used/total=21.34%, heap.memory.used/max=8.99%, minor.gc.count=15, minor.gc.time=255ms, major.gc.count=3, major.gc.time=329ms, load.process=17.91%, load.system=100.00%, load.systemAverage=9.46, thread.count=61, thread.peakCount=68, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=1, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+2019-01-15 01:57:18.630  INFO 2776 --- [hz.waze.HealthMonitor] c.h.internal.diagnostics.HealthMonitor   : [127.0.0.1]:15700 [dev] [3.9.4] processors=4, physical.memory.total=8.0G, physical.memory.free=66.4M, swap.space.total=2.0G, swap.space.free=948.5M, heap.memory.used=175.3M, heap.memory.free=591.7M, heap.memory.total=767.0M, heap.memory.max=1.8G, heap.memory.used/total=22.85%, heap.memory.used/max=9.63%, minor.gc.count=15, minor.gc.time=255ms, major.gc.count=3, major.gc.time=329ms, load.process=25.72%, load.system=NaN%, load.systemAverage=11.07, thread.count=62, thread.peakCount=68, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=1, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+2019-01-15 01:57:38.632  INFO 2776 --- [hz.waze.HealthMonitor] c.h.internal.diagnostics.HealthMonitor   : [127.0.0.1]:15700 [dev] [3.9.4] processors=4, physical.memory.total=8.0G, physical.memory.free=95.6M, swap.space.total=2.0G, swap.space.free=980.5M, heap.memory.used=179.6M, heap.memory.free=587.4M, heap.memory.total=767.0M, heap.memory.max=1.8G, heap.memory.used/total=23.41%, heap.memory.used/max=9.86%, minor.gc.count=15, minor.gc.time=255ms, major.gc.count=3, major.gc.time=329ms, load.process=25.38%, load.system=NaN%, load.systemAverage=10.31, thread.count=62, thread.peakCount=68, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=1, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0.00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+2019-01-15 01:59:16.558  INFO 2776 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-01-15 02:00:34.097  INFO 2776 --- [hz.ShutdownThread] com.hazelcast.instance.Node              : [127.0.0.1]:15700 [dev] [3.9.4] Running shutdown hook... Current state: ACTIVE

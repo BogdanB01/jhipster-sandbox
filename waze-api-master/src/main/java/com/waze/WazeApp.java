@@ -1,58 +1,106 @@
 package com.waze;
 
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.waze.controller.WazeEndPoint;
-import com.waze.service.WazeNotificationService;
-import com.waze.service.WazeRouteService;
-import io.dropwizard.Application;
-import io.dropwizard.forms.MultiPartBundle;
-import io.dropwizard.setup.Bootstrap;
-import io.dropwizard.setup.Environment;
-import org.hibernate.validator.HibernateValidatorConfiguration;
-import org.hibernate.validator.constraintvalidation.HibernateConstraintValidatorContext;
+import com.waze.config.ApplicationProperties;
+import com.waze.config.DefaultProfileUtil;
+
+import io.github.jhipster.config.JHipsterConstants;
+
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.core.env.Environment;
 
-import java.io.IOException;
-
+import javax.annotation.PostConstruct;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+import java.util.Arrays;
+import java.util.Collection;
 
 @SpringBootApplication
-@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
-@EnableEurekaClient
-public class WazeApp extends Application<WazeConfig> {
+@EnableConfigurationProperties({ApplicationProperties.class})
+@EnableDiscoveryClient
+public class WazeApp {
 
-    public static void main(String[] args) throws Exception {
+    private static final Logger log = LoggerFactory.getLogger(WazeApp.class);
 
-        System.setProperty("file.encoding", "UTF-8");
-        SpringApplication.run(WazeApp.class, args);
+    private final Environment env;
+
+    public WazeApp(Environment env) {
+        this.env = env;
     }
 
-    @Override
-    public String getName() {
-        return "waze-app";
+    /**
+     * Initializes waze.
+     * <p>
+     * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
+     * <p>
+     * You can find more information on how profiles work with JHipster on <a href="https://www.jhipster.tech/profiles/">https://www.jhipster.tech/profiles/</a>.
+     */
+    @PostConstruct
+    public void initApplication() {
+        Collection<String> activeProfiles = Arrays.asList(env.getActiveProfiles());
+        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_PRODUCTION)) {
+            log.error("You have misconfigured your application! It should not run " +
+                "with both the 'dev' and 'prod' profiles at the same time.");
+        }
+        if (activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT) && activeProfiles.contains(JHipsterConstants.SPRING_PROFILE_CLOUD)) {
+            log.error("You have misconfigured your application! It should not " +
+                "run with both the 'dev' and 'cloud' profiles at the same time.");
+        }
     }
 
-    @Override
-    public void initialize(Bootstrap<WazeConfig> bootstrap){}
-
-    @Override
-    public void run(WazeConfig conf,
-                    Environment env) throws IOException {
-
-        env.getObjectMapper().configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
-
-        final WazeRouteService wazeRouteService = new WazeRouteService();
-        final WazeNotificationService wazeNotificationService = new WazeNotificationService();
-        final WazeEndPoint wazeEndPoint = new WazeEndPoint(wazeRouteService, wazeNotificationService);
-        final WazeHealthCheck wazeHealthCheck = new WazeHealthCheck(wazeRouteService);
-
-        env.healthChecks().register("waze", wazeHealthCheck);
-
-        env.jersey().register(wazeEndPoint);
+    /**
+     * Main method, used to run the application.
+     *
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(WazeApp.class);
+        DefaultProfileUtil.addDefaultProfile(app);
+        Environment env = app.run(args).getEnvironment();
+        logApplicationStartup(env);
     }
 
+    private static void logApplicationStartup(Environment env) {
+        String protocol = "http";
+        if (env.getProperty("server.ssl.key-store") != null) {
+            protocol = "https";
+        }
+        String serverPort = env.getProperty("server.port");
+        String contextPath = env.getProperty("server.servlet.context-path");
+        if (StringUtils.isBlank(contextPath)) {
+            contextPath = "/";
+        }
+        String hostAddress = "localhost";
+        try {
+            hostAddress = InetAddress.getLocalHost().getHostAddress();
+        } catch (UnknownHostException e) {
+            log.warn("The host name could not be determined, using `localhost` as fallback");
+        }
+        log.info("\n----------------------------------------------------------\n\t" +
+                "Application '{}' is running! Access URLs:\n\t" +
+                "Local: \t\t{}://localhost:{}{}\n\t" +
+                "External: \t{}://{}:{}{}\n\t" +
+                "Profile(s): \t{}\n----------------------------------------------------------",
+            env.getProperty("spring.application.name"),
+            protocol,
+            serverPort,
+            contextPath,
+            protocol,
+            hostAddress,
+            serverPort,
+            contextPath,
+            env.getActiveProfiles());
+
+        String configServerStatus = env.getProperty("configserver.status");
+        if (configServerStatus == null) {
+            configServerStatus = "Not found or not setup for this application";
+        }
+        log.info("\n----------------------------------------------------------\n\t" +
+                "Config Server: \t{}\n----------------------------------------------------------", configServerStatus);
+    }
 }

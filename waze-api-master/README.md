@@ -1,32 +1,81 @@
-## waze api - wrapping waze live map 
+# waze
 
-#### 3 steps and your up & running!
+This application was generated using JHipster 5.7.2, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v5.7.2](https://www.jhipster.tech/documentation-archive/v5.7.2).
 
-##### 1) download [waze-server](https://github.com/Nimrod007/waze-api/releases/download/1.1/waze-server.jar)
-##### 2) run the server (port 8080) :
- ```bash
- java -jar waze-server.jar server
- ```
- 
-##### 3) send a request:
-```bash
-curl -v "http://localhost:8080/waze/routesWithDirections?end=156+5th+Avenue%2C+New+York%2C+NY+10010&start=6+East+57th+Street%2C+New+York%2C+NY+10022" -H "Accept: application/json"
+This is a "microservice" application intended to be part of a microservice architecture, please refer to the [Doing microservices with JHipster][] page of the documentation for more information.
+
+This application is configured for Service Discovery and Configuration with the JHipster-Registry. On launch, it will refuse to start if it is not able to connect to the JHipster-Registry at [http://localhost:8761](http://localhost:8761). For more information, read our documentation on [Service Discovery and Configuration with the JHipster-Registry][].
+
+## Development
+
+To start your application in the dev profile, simply run:
+
+    ./mvnw
+
+For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
+
+## Building for production
+
+To optimize the waze application for production, run:
+
+    ./mvnw -Pprod clean package
+
+To ensure everything worked, run:
+
+    java -jar target/*.war
+
+Refer to [Using JHipster in production][] for more details.
+
+## Testing
+
+To launch your application's tests, run:
+
+    ./mvnw clean test
+
+For more information, refer to the [Running tests page][].
+
+### Code quality
+
+Sonar is used to analyse code quality. You can start a local Sonar server (accessible on http://localhost:9001) with:
+
+```
+docker-compose -f src/main/docker/sonar.yml up -d
 ```
 
-##### documentation (full list of supported requests) - [link](http://htmlpreview.github.io/?https://github.com/Nimrod007/waze-api/blob/master/docs.html)
+Then, run a Sonar analysis:
 
-##### list of all end-points with curl examples - [link](https://github.com/Nimrod007/waze-api/blob/master/scripts/testWazeAppServer.sh)
+```
+./mvnw -Pprod clean test sonar:sonar
+```
 
-#### advance usage:
+For more information, refer to the [Code quality page][].
 
-##### using the the waze service (no server) - [link](https://github.com/Nimrod007/waze-api/blob/master/src/test/java/com/waze/WazeRouteServiceTest.java)
-##### run the server with custom port:
- ```bash
- java -Ddw.server.applicationConnectors[0].port=9090 -Ddw.server.adminConnectors[0].port=9091 -jar waze-server.jar server
- ```
-##### run the server with custom config (see [conf.yml](/src/main/resources/conf.yml) for example):
- ```bash
- java -jar waze-server.jar.jar server conf.yml
- ```
+## Using Docker to simplify development (optional)
 
-##### http://www.nimrodstech.com
+You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
+
+You can also fully dockerize your application and all the services that it depends on.
+To achieve this, first build a docker image of your app by running:
+
+    ./mvnw package -Pprod verify jib:dockerBuild
+
+Then run:
+
+    docker-compose -f src/main/docker/app.yml up -d
+
+For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
+
+## Continuous Integration (optional)
+
+To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
+
+[jhipster homepage and latest documentation]: https://www.jhipster.tech
+[jhipster 5.7.2 archive]: https://www.jhipster.tech/documentation-archive/v5.7.2
+[doing microservices with jhipster]: https://www.jhipster.tech/documentation-archive/v5.7.2/microservices-architecture/
+[using jhipster in development]: https://www.jhipster.tech/documentation-archive/v5.7.2/development/
+[service discovery and configuration with the jhipster-registry]: https://www.jhipster.tech/documentation-archive/v5.7.2/microservices-architecture/#jhipster-registry
+[using docker and docker-compose]: https://www.jhipster.tech/documentation-archive/v5.7.2/docker-compose
+[using jhipster in production]: https://www.jhipster.tech/documentation-archive/v5.7.2/production/
+[running tests page]: https://www.jhipster.tech/documentation-archive/v5.7.2/running-tests/
+[code quality page]: https://www.jhipster.tech/documentation-archive/v5.7.2/code-quality/
+[setting up continuous integration]: https://www.jhipster.tech/documentation-archive/v5.7.2/setting-up-ci/
